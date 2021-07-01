@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { createIconSetFromFontello } from '@expo/vector-icons';
+import fontelloConfig from './config.json';
 import { StyleSheet, Text, View } from 'react-native';
 
+
 export default function App() {
+  const Icon = createIconSetFromFontello(fontelloConfig, 'Fontello');
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Open up App.js to start working on your app!</Text> 
+        <Icon name="emo-tongue" size={24} color="black"></Icon>
       <StatusBar style="auto" />
     </View>
   );
